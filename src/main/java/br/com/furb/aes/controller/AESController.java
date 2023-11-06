@@ -28,6 +28,6 @@ public class AESController {
 		String contentFile = new String(file.getBytes(), "ASCII");
 		byte[] result = service.cifrar(contentFile, key);
 		service.saveFile(fileName, result);
-		return String.format("%x", new BigInteger(1, result));
+		return new String(result);
 	}
 }
