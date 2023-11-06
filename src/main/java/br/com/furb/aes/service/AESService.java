@@ -51,7 +51,7 @@ public class AESService {
 		String pathName = "C:\\Temp\\%s.bin";
 		try (FileWriter fileWriter = new FileWriter(new File(String.format(pathName, fileName)));
 				PrintWriter printWriter = new PrintWriter(fileWriter);) {
-			printWriter.print(cipherText);
+			printWriter.print(new String(cipherText));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
